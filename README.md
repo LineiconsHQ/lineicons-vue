@@ -1,39 +1,35 @@
-# Lineicons Vue - Essential UI Icons for Vue
+# Lineicons Vue — Essential UI Icons for Vue
 
-Create stunning designs with 26082+ Free and Premium Icons. Find the perfect style and category to match your project's unique needs.
+**Lineicons Vue** provides ready-to-use Vue components for [Lineicons](https://lineicons.com), making it easy to add scalable SVG icons to your Vue 3 projects.
+Customize size, color, and style with simple props — perfect for modern UI development.
 
-Vue Components for [Lineicons](https://lineicons.com)
-
-### [Explore and Download All 26082+ Icons](https://lineicons.com/)
+---
 
 ## Installation
-
-### Free Icons
 
 ```bash
 npm install @lineiconshq/vue-lineicons @lineiconshq/free-icons
 ```
 
+---
+
 ## Usage
 
-### Basic Usage
-
-After installing the package import icon and use anywhere for example
 ### With Composition API
 
 ```vue
 <template>
   <div>
-    <LineIcon :icon="Home2Outlined" :size="24" color="blue" :stroke-width="1.5" />
-    <LineIcon :icon="CloudBolt1Bulk" :size="40" color="orange" />
-    <LineIcon :icon="CloudBolt1Outlined" :size="50" color="blue" />
-    <LineIcon :icon="CloudBolt1Duotone" :size="30" color="green" />
-    <LineIcon :icon="CloudBolt1Solid" :size="24" class="bg-success-500" />
+    <Lineicons :icon="Home2Outlined" :size="24" color="blue" :stroke-width="1.5" />
+    <Lineicons :icon="CloudBolt1Bulk" :size="40" color="orange" />
+    <Lineicons :icon="CloudBolt1Outlined" :size="50" color="blue" />
+    <Lineicons :icon="CloudBolt1Duotone" :size="30" color="green" />
+    <Lineicons :icon="CloudBolt1Solid" :size="24" class="bg-success-500" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { LineIcon } from "@lineiconshq/vue-lineicons";
+import { Lineicons } from "@lineiconshq/vue-lineicons";
 import {
   Home2Outlined,
   CloudBolt1Bulk,
@@ -44,21 +40,21 @@ import {
 </script>
 ```
 
+---
+
 ### With Options API
 
 ```vue
 <template>
-  <LineIcon :icon="currentIcon" :size="24" color="red" />
+  <Lineicons :icon="currentIcon" :size="24" color="red" />
 </template>
 
 <script>
-import { LineIcon } from "@lineiconshq/vue-lineicons";
+import { Lineicons } from "@lineiconshq/vue-lineicons";
 import { Home2Outlined } from "@lineiconshq/free-icons";
 
 export default {
-  components: {
-    LineIcon,
-  },
+  components: { Lineicons },
   data() {
     return {
       currentIcon: Home2Outlined,
@@ -68,14 +64,14 @@ export default {
 </script>
 ```
 
+---
+
 ## API Reference
 
-### LineIcon
+### `<Lineicons />`
 
-Main component for rendering icons.
-
-```typescript
-interface LineIconProps {
+```ts
+interface LineiconsProps {
   icon: IconData;
   size?: number | string;
   color?: string;
@@ -95,38 +91,43 @@ interface IconData {
 }
 ```
 
-**Props:**
+| Prop          | Type               | Default        | Description                           |
+| ------------- | ------------------ | -------------- | ------------------------------------- |
+| `icon`        | `IconData`         | — *(required)* | The icon object to render.            |
+| `size`        | `number \| string` | `24`           | Icon size (pixels or CSS units).      |
+| `color`       | `string`           | `currentColor` | Icon color.                           |
+| `class`       | `string`           | —              | CSS class applied to the SVG element. |
+| `strokeWidth` | `number`           | `1.5`          | Stroke width for outlined icons.      |
 
-- `icon` - The icon data object to render (required)
-- `size` - Size of the icon (default: 24)
-- `color` - Color of the icon (default: 'currentColor')
-- `class` - CSS class to apply to the SVG element (optional)
-- `strokeWidth` - Stroke width for stroke icons (default: 1.5)
-- All other attributes are passed through to the SVG element
+All other valid SVG attributes are supported and passed through.
+
+---
 
 ## TypeScript Support
 
-Full TypeScript support is included with type definitions for all components and icons.
+Full **TypeScript** support with type definitions for all components and icons for better autocomplete and DX.
+
+---
 
 ## Available Icon Styles
 
-- **Stroke**: Outline icons with customizable stroke width
-- **Solid**: Filled icons
-- **Duotone**: Two-tone icons
-- **Bulk**: Filled icons with background
-- **Outlined**: Alternative outline style
+* **Stroke** — Outline icons with customizable stroke width
+* **Solid** — Fully filled icons
+* **Duotone** — Two-tone icons
+* **Bulk** — Filled icons with background accents
+* **Outlined** — Alternative outline style
 
+---
 
 ## License
 
-- **Free Icons**: MIT License
+* **Free Icons:** [MIT License](https://opensource.org/licenses/MIT)
 
-## Support
+---
 
-- [Documentation](https://lineicons.com/docs)
-- [Support](https://lineicons.com/support)
+## Resources & Support
 
-
-### [Lineicons Figma Plugin](https://www.figma.com/community/plugin/1217738304122072948/Lineicons)
-
-### [Lineicons - Figma Source](https://www.figma.com/community/file/1198194066179400874)
+* [📖 Documentation](https://lineicons.com/docs)
+* [💬 Support](https://lineicons.com/support)
+* [🔌 Figma Plugin](https://www.figma.com/community/plugin/1217738304122072948/Lineicons)
+* [📁 Figma Source](https://www.figma.com/community/file/1198194066179400874)
