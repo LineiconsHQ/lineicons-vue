@@ -24,16 +24,16 @@ After installing the package import icon and use anywhere for example
 ```vue
 <template>
   <div>
-    <LineIcon :icon="Home2Outlined" :size="24" color="blue" :stroke-width="1.5" />
-    <LineIcon :icon="CloudBolt1Bulk" :size="40" color="orange" />
-    <LineIcon :icon="CloudBolt1Outlined" :size="50" color="blue" />
-    <LineIcon :icon="CloudBolt1Duotone" :size="30" color="green" />
-    <LineIcon :icon="CloudBolt1Solid" :size="24" class="bg-success-500" />
+    <Lineicons :icon="Home2Outlined" :size="24" color="blue" :stroke-width="1.5" />
+    <Lineicons :icon="CloudBolt1Bulk" :size="40" color="orange" />
+    <Lineicons :icon="CloudBolt1Outlined" :size="50" color="blue" />
+    <Lineicons :icon="CloudBolt1Duotone" :size="30" color="green" />
+    <Lineicons :icon="CloudBolt1Solid" :size="24" class="bg-success-500" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { LineIcon } from "@lineiconshq/vue-lineicons";
+import { Lineicons } from "@lineiconshq/vue-lineicons";
 import {
   Home2Outlined,
   CloudBolt1Bulk,
@@ -48,16 +48,16 @@ import {
 
 ```vue
 <template>
-  <LineIcon :icon="currentIcon" :size="24" color="red" />
+  <Lineicons :icon="currentIcon" :size="24" color="red" />
 </template>
 
 <script>
-import { LineIcon } from "@lineiconshq/vue-lineicons";
+import { Lineicons } from "@lineiconshq/vue-lineicons";
 import { Home2Outlined } from "@lineiconshq/free-icons";
 
 export default {
   components: {
-    LineIcon,
+    Lineicons,
   },
   data() {
     return {
@@ -70,12 +70,12 @@ export default {
 
 ## API Reference
 
-### LineIcon
+### Lineicons
 
 Main component for rendering icons.
 
 ```typescript
-interface LineIconProps {
+interface LineiconsProps {
   icon: IconData;
   size?: number | string;
   color?: string;

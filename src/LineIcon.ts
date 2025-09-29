@@ -11,15 +11,15 @@ export interface IconData {
   hasStrokeWidth: boolean;
 }
 
-export interface LineIconProps {
+export interface LineiconsProps {
   icon: IconData;
   size?: number | string;
   color?: string;
   strokeWidth?: number;
 }
 
-const LineIcon = defineComponent({
-  name: 'LineIcon',
+const Lineicons = defineComponent({
+  name: 'Lineicons',
   props: {
     icon: {
       type: Object as () => IconData,
@@ -38,7 +38,7 @@ const LineIcon = defineComponent({
       default: 1.5
     }
   },
-  setup(props: LineIconProps, { attrs }) {
+  setup(props: LineiconsProps, { attrs }) {
     const processedSvgContent = computed(() => {
       let content = props.icon.svg;
       const color = props.color || 'currentColor';
@@ -88,4 +88,4 @@ const LineIcon = defineComponent({
   }
 });
 
-export default LineIcon;
+export default Lineicons;
