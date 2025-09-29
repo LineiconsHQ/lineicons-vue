@@ -79,7 +79,7 @@ Main component for rendering icons.
 ```typescript
 interface LineiconsProps {
   icon: IconData;
-  size?: number | string;
+  size?: number;
   color?: string;
   class?: string;
   strokeWidth?: number;
