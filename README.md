@@ -25,16 +25,11 @@ npm install @lineiconshq/vue-lineicons @lineiconshq/free-icons
     <Lineicons :icon="CloudBolt1Outlined" :size="50" color="blue" />
     <Lineicons :icon="CloudBolt1Duotone" :size="30" color="green" />
     <Lineicons :icon="CloudBolt1Solid" :size="24" class="bg-success-500" />
-    <Lineicons :icon="Home2Outlined" :size="24" color="blue" />
-    <Lineicons :icon="CloudBolt1Bulk" :size="40" color="orange" />
-    <Lineicons :icon="CloudBolt1Outlined" :size="50" color="blue" />
-    <Lineicons :icon="CloudBolt1Duotone" :size="30" color="green" />
-    <Lineicons :icon="CloudBolt1Solid" :size="24" class="bg-success-500" />
+    <Lineicons :icon="Home2Stroke" :size="80" :stroke-width="2" /> 
   </div>
 </template>
 
 <script setup lang="ts">
-import { Lineicons } from "@lineiconshq/vue-lineicons";
 import { Lineicons } from "@lineiconshq/vue-lineicons";
 import {
   Home2Outlined,
@@ -42,6 +37,7 @@ import {
   CloudBolt1Outlined,
   CloudBolt1Duotone,
   CloudBolt1Solid,
+  Home2Stroke,
 } from "@lineiconshq/free-icons";
 </script>
 ```
@@ -53,11 +49,9 @@ import {
 ```vue
 <template>
   <Lineicons :icon="currentIcon" :size="24" color="red" />
-  <Lineicons :icon="currentIcon" :size="24" color="red" />
 </template>
 
 <script>
-import { Lineicons } from "@lineiconshq/vue-lineicons";
 import { Lineicons } from "@lineiconshq/vue-lineicons";
 import { Home2Outlined } from "@lineiconshq/free-icons";
 
